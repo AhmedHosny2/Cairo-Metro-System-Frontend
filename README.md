@@ -1,86 +1,92 @@
-Frontend Part of the Cairo-Metro-System Project.
-Book, refund and manage metro tickets easily. Also subscribe to premium ticket plans to facilitate ticket booking for you.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<html>
+<h1>Cairo Metro System</h1>
+   <img src="README_Files/Homepage.png" alt="Alt text" title="Homepage">
+   <h3></h3>
+       <h2>Demo</h2>
+        <h4>You can watch a walkthrough of the website from <a href="https://youtu.be/BlJG40Y9ZSs" target="_blank">Here</a></h4>
+    <h2>
+    Table of contents
+    </h2>
+    <h3> 
+        <ul>
+            <li>Project Title</li>
+            <li>Demo</li>
+            <li>Table of contents</li>
+            <li>Description</li>
+            <li>Usage</li>
+            <li>List of Features</li>
+            <li>Preview</li>
+            <li>Contributers</li>
+        </ul>
+    </h3>
+    <br>
+    <h2>Description</h2>
+    <h4>Cairo Metro System is a web-based application that allows users to reserve and pay for metro tickets, view their upcoming rides, buy subscriptions, and more. Admins can manage the stations, routes, and zones. The application is built using the PERN stack, which consists of PostgreSQL, Express, React, and Node.js. PostgreSQL is an open-source object-relational database management system that supports both SQL and JSON querying. Express is a web framework for Node.js that provides features for routing, middleware, and handling HTTP requests and responses. React is a JavaScript library for building user interfaces. Node.js is a JavaScript runtime for developing server-side and networking applications. The application also uses Google Maps API for displaying maps and Stripe API for handling payments. The application is responsive with a silk design on all devices.
+    </h4>
+    <h2>Usage</h2>
+    <h3><ol>
+            <li>Clone this project</li>
+            <li>Download Postgres and PGadmin</li>
+            <li>Create a new databse in PGadmin then navigate to db.js and enter your database configuration</li>
+            <li>Navigate to rerun_DB.sql and run the sql queries using PGadmin</li>
+            <li>Open terminal in the project folder then run npm i command</li>
+            <li>Clone the Front End files from this repo : <a href="https://github.com/youfiElwy/frontend-v3" target="_blank">Link</a></li>
+            <li>Clone the Location Service files from this repo : <a href="https://github.com/AhmedHosny2/Google-Metro-Location-service" target="_blank">Link</a></li>
+            <li>Open terminal in the front end project and location service folder then run npm i command</li>
+            <li>Run npm start in all the projects and wait a min or two</li>
+            <li>Enter in your browser http://localhost:5000/</li>
+        </ol></h3>
+    <h2>List of Features</h2>
+        <ul>
+            <li>Responsive Design</li>
+            <li>Payments with Stripe API</li>
+            <li>Google Maps API for displaying maps </li>
+            <li>Forget password Feature</li>
+            <li>Auto Complete Station names</li>
+            <li>Passwords salted and hashed in the databse</li>
+        </ul>
+    <h2>Preview</h2>
+    <br>
+    <h3>Sign Up page</h3>
+    <br>
+    <img src="README_Files/SignUp.png" alt="Alt text" title="Sign Up Page">
+    <br>
+    <h3>Map</h3>
+    <br>
+    <img src="README_Files/Map1.png" alt="Alt text" title="Map">
+    <br>
+    <br>
+    <img src="README_Files/Map2.png" alt="Alt text" title="Map">
+    <br>
+    <h3>Tickets</h3>
+    <br>
+    <img src="README_Files/Tickets.png" alt="Alt text" title="Tickets">
+    <br>
+    <h3>Stripe Payment</h3>
+    <br>
+    <img src="README_Files/Stripe.png" alt="Alt text" title="Stripe Payment">
+    <br>
+    <h3>Auto Complete Stations and check price</h3>
+    <br>
+    <img src="README_Files/AutoComplete.gif" alt="Alt text" title="Auto Complete">
+    <br>
+    <h3>Admin Dashboard</h3>
+    <br>
+    <img src="README_Files/AdminDashboard.png" alt="Alt text" title="Admin Dashboard">
+    <br>
+    <h3>Responsivness</h3>
+    <br>
+    <img src="README_Files/Responsive1.gif" alt="Alt text" title="Responive">
+    <br>
+    <h3>Hashed and Salted passwords</h3>
+    <br>
+    <img src="README_Files/HashSalt.png" alt="Alt text" title="Password">
+    <br>
+    <h2>Contributers</h2>
+        <ul>
+            <li>Ahmed Osama <a href="https://github.com/AhmedOsamaAli" target="_blank">Github</a> <a href="https://www.linkedin.com/in/ahmedosamadiab/" target="_blank">Linkedin</a></li>
+            <li>Ahmed Yehia <a href="https://github.com/AhmedHosny2" target="_blank">Github</a> <a href="https://www.linkedin.com/in/ahmed-yehia-155629206/" target="_blank">Linkedin</a></li>
+            <li>Bahy Mohamed <a href="https://github.com/bahylol" target="_blank">Github</a> <a href="https://www.linkedin.com/in/bahy-salama/" target="_blank">Linkedin</a></li>
+            <li>Youssef Elwy <a href="https://github.com/youfiElwy" target="_blank">Github</a> <a href="https://www.linkedin.com/in/youssef-elwy-427682268/" target="_blank">Linkedin</a></li>
+        </ul>
+</html>
