@@ -2,7 +2,7 @@ import Footer from '../Footer/Footer.js';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import React from 'react';
-import { toast, ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Signup-Login.css';
 
@@ -33,29 +33,32 @@ function RegistrationForm() {
 	};
 	const notify = (alert) => {
 		toast.error(alert, {
-			position: "top-center",
+			position: 'top-center',
 			autoClose: 3000,
 			hideProgressBar: false,
 			closeOnClick: true,
 			pauseOnHover: true,
 			draggable: true,
 			progress: undefined,
-			theme: "colored",
+			theme: 'colored',
 		});
 	};
 	const confirm = () => {
-		toast.success('Your account has been created succesfully you will be redirected to the login page', {
-			position: "top-center",
-			autoClose: 2500,
-			hideProgressBar: false,
-			closeOnClick: true,
-			pauseOnHover: true,
-			draggable: true,
-			progress: undefined,
-			theme: "colored",
-			});
+		toast.success(
+			'Your account has been created succesfully you will be redirected to the login page',
+			{
+				position: 'top-center',
+				autoClose: 2500,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: 'colored',
+			}
+		);
 	};
-	
+
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		const someNull = Object.values(user).some((x) => x === '');
@@ -68,14 +71,14 @@ function RegistrationForm() {
 			return;
 		}
 		if (gender === '') {
-			notify("please fill the gender");
+			notify('please fill the gender');
 			return;
 		}
 		if (user.password !== user.confirmPassword) {
 			notify("passwords don't match");
 			return;
 		}
-		fetch('http://localhost:3000/api/v1/users/signup', {
+		fetch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/signup`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -96,11 +99,12 @@ function RegistrationForm() {
 			.then((data) => {
 				if (data[0] === 200) {
 					confirm();
-					setTimeout(function() {
+					setTimeout(function () {
 						navigate('/login');
-					  }, 2501);				}
-				else { notify(data[1]); }
-
+					}, 2501);
+				} else {
+					notify(data[1]);
+				}
 			})
 			.catch((error) => console.error(error));
 	};
@@ -174,6 +178,7 @@ function RegistrationForm() {
 									placeholder="Enter phone number"
 									name="phone"
 									value={user.phone}
+									maxLength={17}
 									onChange={handleChange}
 									required
 								/>
@@ -237,6 +242,7 @@ function RegistrationForm() {
 								placeholder="Enter SSN"
 								name="ssn"
 								value={user.ssn}
+								maxLength={14}
 								onChange={handleChange}
 								required
 							/>
