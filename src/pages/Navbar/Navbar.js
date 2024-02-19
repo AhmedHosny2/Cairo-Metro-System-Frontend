@@ -173,10 +173,10 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn, userType, setUserType }) => {
 				<ListItem disablePadding>
 					<ListItemButton
 						onClick={() =>
-							window.open('https://google-metro-location-service.vercel.app/', '_blank')
+							window.open('https://google-metro-location.ahmed-yehia.me/', '_blank')
 						} // Attach the onClick event handler
 						component="a" // Change to "a" since it's not a react-router link
-						href="https://google-metro-location-service.vercel.app/"
+						href="https://google-metro-location.ahmed-yehia.me/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -263,7 +263,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn, userType, setUserType }) => {
 							<a href={isLoggedIn ? '/subscription' : '/login'}>Subscription</a>
 						</li>
 						<li>
-							<a href={'https://google-metro-location-service.vercel.app/'}>Start Ride</a>
+							<a href={'https://google-metro-location.ahmed-yehia.me/'}>Metro Map</a>
 						</li>
 
 						{(userType === 'admin' || userType === 'superadmin') && (
